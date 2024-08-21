@@ -52,7 +52,7 @@
         carros.Add(2, "Ford ka");
 
         Console.WriteLine();//PULA LINHA EM BRANCO
-        Console.WriteLine("===============================)"; 
+        Console.WriteLine("===============================");
         Console.WriteLine();//PULA LINHA EM BRANCO
 
         Console.WriteLine("Meu Dicionario de Carros:");
@@ -61,6 +61,77 @@
         {
             Console.WriteLine($"{carro.Key} - {carro.Value}");
         }
+        Console.WriteLine();//PULA LINHA EM BRANCO
+        Console.WriteLine("===============================");
+        Console.WriteLine();//PULA LINHA EM BRANCO
 
+        //TRABALHANDO COM FILA //
+        /*CRIAR UMA FILA (QUEUE)*/
+        Queue<string> filaBanco = new Queue<string>();
+
+        /*ADICIONAR ELEMENTOS EM UMA FILA */
+        filaBanco.Enqueue("André");
+        filaBanco.Enqueue("João");
+        filaBanco.Enqueue("Maria");
+        filaBanco.Enqueue("Bia");
+
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+        }
+
+        /*RETIRAR O */
+        filaBanco.Dequeue();
+
+        Console.WriteLine();//PULA LINHA EM BRANCO
+        Console.WriteLine("===============================");
+        Console.WriteLine();//PULA LINHA EM BRANCO
+        foreach (var pessoa in filaBanco)
+        {
+            Console.WriteLine(pessoa);
+        }
+        /*VERIFICAR SE EXISTE UM ELEMENTO NA FILA*/
+
+        bool achou = filaBanco.Contains("Manoel");
+
+        if (achou)
+        {
+            Console.WriteLine("A pessoa esta na fila");
+        }
+        else
+        {
+            Console.WriteLine("A pessoa não esta la fila");
+        }
+
+        Console.WriteLine();//PULA LINHA EM BRANCO
+        Console.WriteLine("===============================");
+        Console.WriteLine();//PULA LINHA EM BRANCO
+
+        // TRABALHANDO COM PILHA (STRAK)
+        /*CRIANDO UMA PILHA*/
+        Stack<string> Livros = new Stack<string>();
+
+        //ADICIONAR ELEMENTOS COM CRIANDO UMA PILHA*/
+        Livros.Push("Chapeuzinho Vermelho");
+        Livros.Push("Branca de neve e os sete anões");
+        Livros.Push("Princesa e o sapo");
+
+        foreach (var livro in Livros)
+        {
+            Console.WriteLine(livro);
+        }
+        Console.WriteLine();//PULA LINHA EM BRANCO
+        Console.WriteLine("===============================");
+        Console.WriteLine();//PULA LINHA EM BRANCO
+
+        /*REMOVE O PRIMEIRO ELEMENTO DA PILHA*/
+        Livros.Pop();
+        foreach (var livro in Livros)
+        {
+            Console.WriteLine(livro);
+        }
+        Console.WriteLine();//PULA LINHA EM BRANCO
+        Console.WriteLine("===============================");
+        Console.WriteLine();//PULA LINHA EM BRANCO
     }
 }
